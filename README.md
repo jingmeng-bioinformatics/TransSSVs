@@ -29,6 +29,8 @@ Getting started
 5. Run model_infer.py to predict somatic small variants:<br>
 
 Please help us improve TransSSVs by reporting bugs or ideas on how to make things better. You can submit an issue or send me an email.<br>
-Jiangyuan Wang<br>
-wjy_bazi@hotmail.com
+
+Jing Meng<br>
+
+jing.mengrabbit@outlook.com
 
