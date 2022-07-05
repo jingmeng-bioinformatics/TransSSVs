@@ -30,10 +30,10 @@ Getting started
 
 
 Example of the Validated_labels file for validated sites with labels (1: somatic site, 0: non-somatic site):<br><br>
-`chr1    790265  0
- chr1    1595272 1
- chr1    2312314 1
- chr1    5006153 0`<br>
+        `chr1    790265  0`<br>
+        `chr1    1595272 1`<br>
+        `chr1    2312314 1`<br>
+        `chr1    5006153 0`<br>
 
 
 Please help us improve TransSSVs by reporting bugs or ideas on how to make things better. You can submit an issue or send me an email.<br>
