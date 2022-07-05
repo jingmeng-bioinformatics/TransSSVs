@@ -30,7 +30,7 @@ Getting started
 
 Please help us improve TransSSVs by reporting bugs or ideas on how to make things better. You can submit an issue or send me an email.<br>
 
-Jing Meng<br>
+Jing Meng, Jiangyuan Wang<br>
 
-jing.mengrabbit@outlook.com
+jing.mengrabbit@outlook.com   wjy_bazi@hotmail.com<br>
 
