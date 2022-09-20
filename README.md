@@ -36,7 +36,7 @@ Example of the Validated_labels file for validated sites with labels (1: somatic
         `chr1    5006153 0`<br>
 
 
-Please help us improve TransSSVs by reporting bugs or ideas on how to make things better. You can submit an issue or send me an email.<br>
+Please help us improve TransSSVs by reporting bugs or ideas on how to make things better. You can submit an issue or send us an email.<br>
 
 Jing Meng, Jiangyuan Wang<br>
 
