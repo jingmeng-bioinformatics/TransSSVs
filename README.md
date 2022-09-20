@@ -1,6 +1,6 @@
 # TransSSVs
 
-Detecting somatic small variants in paired tumor and normal sequencing data with attention-based neural network
+Accurate detection of somatic small variants with attention-based deep neural networks
 
 The BAM files of tumor and normal samples are first converted into a mixed pileup file where the candidate somatic sites are identified. Then, the mapping information that corresponds to the reference and variant alleles in the tumor and normal samples is extracted and encoded. Next, the intersite interactions in the context sequence are captured by the multi-head attention-based neural network to obtain a new feature representation of the genomic context. Then, the new feature representation is used to predict the somatic state of the candidate somatic sites. Finally, potential somatic small variants determined by the TransSSVs model are generated in the variant call format (VCF).
 
