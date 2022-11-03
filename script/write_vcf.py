@@ -40,7 +40,7 @@ def main(args):
         # write data lines
         for line, line_pair in zip(enume_Cs, enume_pc):
             line_content = line[1].rstrip('\n').split('\t')
-            line_pair_content = line_pair[0].rstrip('\n').split('\t')
+            line_pair_content = line_pair[1].rstrip('\n').split('\t')
             
             if float(line_pair_content[1]) >= t: 
 
