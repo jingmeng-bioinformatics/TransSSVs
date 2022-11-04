@@ -642,13 +642,14 @@ def main(args):
             matrix_1_all=matrix_1_all.reshape(matrix_1_all.shape[0],matrix_1_all.shape[1],1)
             if args.indicator == 'training':
                 label_npy=np.array(label,dtype='int64')
+                label_array=np.concatenate((label_array,label_npy))
             else:
                 pass
-                npyarray_1=np.concatenate((npyarray_1,matrix_1_all),axis=2)
+            npyarray_1=np.concatenate((npyarray_1,matrix_1_all),axis=2)
         npyarray_1=npyarray_1.transpose(2,0,1)
         if args.indicator == 'training':
-            np.save(args.path+'/'+args.filename_1+'_npyarray/'+'data.'+args.filename_1+str(j)+'.npy',npyarray_1)
-            np.save(args.path+'/'+args.filename_1+'_npyarray/'+'label.'+args.filename_1+str(j)+'.npy',label_array)
+            np.save(args.path+'/'+args.filename_1+'_npyarray/'+'data.'+args.filename_1+'.npy',npyarray_1)
+            np.save(args.path+'/'+args.filename_1+'_npyarray/'+'label.'+args.filename_1+'.npy',label_array)
 
         else:
             pass
