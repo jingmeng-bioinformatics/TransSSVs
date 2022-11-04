@@ -20,7 +20,7 @@ Getting started
 <br>
 1. Run samtools (tested version: 1.8) to convert tumor and normal BAM files to a mixed pileup file required by TransSSVs:<br><br>
 
-`samtools mpileup -B -d 100 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s -a /path/to/tumor.bam /path/to/normal.bam | bgzip > /path/to/mixed_pileup_file`<br><br>Note: For the case of applying TransSSVs on a part of the whole genome, increase the BED entry by n (the number of flanking genomic sites to the left or right of the candidate somatic site) base pairs in each direction, and specify the genomic region via the option -l or -r. <br><br>
+`samtools mpileup -B -d 100 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s -a /path/to/tumor.bam /path/to/normal.bam | gzip > /path/to/mixed_pileup_file`<br><br>Note: For the case of applying TransSSVs on a part of the whole genome, increase the BED entry by n (the number of flanking genomic sites to the left or right of the candidate somatic site) base pairs in each direction, and specify the genomic region via the option -l or -r. <br><br>
 2. Run identi_candi_sites.py to identify candidate somatic small variants from the mixed pileup file: <br><br>` python3 identi_candi_sites.py
  --Tumor_Normal_mpileup /path/to/mixed_pileup_file
  --Candidate_somatic_sites /path/to/candidate_sites`<br><br>
