@@ -413,10 +413,7 @@ def locate(source, pattern = ['\+[0-9]+', '\-[0-9]+']):
 
 
 def append_mapping_infor(index_list, strand_all_list, state_all_list, field_holder_sample, mapping, sample):
-    '''
-    base = ['A', 'T', 'G', 'C', 'N']
-    encoding = ['00001', '00010', '00100', '01000', '10000'] # encoding for bases
-    '''
+
     mq_list=[]
     bq_list=[]
     dis_list=[]
@@ -522,21 +519,7 @@ def get_matrix_1(index_all, strand_all, state_all,mq_list,bq_list,k_dict):
 
 
 def generate_mapping_infor_reads(col):
-    #base = ['A', 'T', 'G', 'C', 'N']
-    #encoding = ['00001', '00010', '00100', '01000', '10000'] # encoding for bases
-    lines = []
-    mapping = col[1].rstrip('\n').split('\t')
-    
-    # the first 5 rows: encoding for base in the reference genome
-    
-    
-    #for ele in encoding[base.index(mapping[2].upper())]:
-        #lines.append(ele)    
-    
-    
-    # max(depth) = 100 
-    # each read base takes 5 rows ( strand: 1 rows, state: 1 rows, base_quality: 1 row, mapping quality: 1 row and distance: 1 row)
-    # the number of total rows in each column is 1000 (100*5 + 100*5)
+
     index_all_tumor, strand_all_tumor, state_all_tumor, field_holder_tumor, dict_all_tumor = locate(mapping[4])
     index_all_normal, strand_all_normal, state_all_normal, field_holder_normal ,dict_all_normal= locate(mapping[9])
     mq_list_tumor, bq_list_tumor = append_mapping_infor(index_all_tumor, strand_all_tumor, state_all_tumor, field_holder_tumor, mapping, 'tumor')
@@ -572,16 +555,14 @@ def main(args):
             else:
                 pass
 
-            #base = ['A', 'T', 'G', 'C', 'N']
+
             line_content = line[1].rstrip('\n').split('\t')
             
-            # encoding for bases
-            #encoding = ['00001', '00010', '00100', '01000', '10000'] 
             
             matrix_1_all=np.zeros((0,52),dtype='float32')
             
             
-            # process the first line
+
 
             if line[0] == 0:
                 for col in itertools.islice(enume_TN, int(line_content[0]) - args.number_of_columns, int(line_content[0]) + args.number_of_columns +1):
