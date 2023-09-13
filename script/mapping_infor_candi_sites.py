@@ -488,10 +488,10 @@ def get_matrix_1(index_all, strand_all, state_all,mq_list,bq_list,k_dict):
 
     total=len(variant_allele) + len(ref_allele)
     vaf_ref=0 if total==0 else (len(ref_allele)/total)
-    vaf_varant=0 if total==0 else (len(variant_allele)/total)
+    vaf_variant=0 if total==0 else (len(variant_allele)/total)
 
-    matrix[0,0]=len(ref_allele)
-    matrix[0,1]=len(variant_allele)
+    matrix[0,0]=vaf_ref
+    matrix[0,1]=vaf_variant
     matrix[0,2]=mq_mean_ref
     matrix[0,3]=mq_mean_variant
     matrix[0,4]=bq_mean_ref
