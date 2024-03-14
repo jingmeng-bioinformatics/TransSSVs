@@ -8,14 +8,23 @@ TransSSVs was tested on Debian GNU/Linux 11 (bullseye) and requires Python 3.
 
 Prerequisites
 ----------
-TensorFlow 2.7.0 <br>
-sklearn 0.19.2 <br>
-pandas 1.3.5 <br>
-numpy 1.21.6 <br>
-keras 2.7.0 <br>
+Python 3.7 and the following Python packages must be installed:
++ samtools 18
++ TensorFlow 2.7.0 
++ sklearn 0.19.2
++ pandas 1.3.5
++ numpy 1.21.6
++ keras 2.7.0
 
-
-
+You can install these packages using anaconda/miniconda :
+```
+conda install samtools=1.8
+conda install tensorflow=2.7
+conda install scikit-learn=0.19.2
+conda install pandas=1.3.5
+conda install numpy=1.21.6
+conda install keras=2.7
+```
 
 Working demonstration
 ----------
