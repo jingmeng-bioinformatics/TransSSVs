@@ -15,8 +15,18 @@ numpy 1.21.6 <br>
 keras 2.7.0 <br>
 
 
+
+
+Working demonstration
+----------
+<br>
+
+![image](https://github.com/jingmeng-bioinformatics/TransSSVs/assets/35085665/897c7b39-0dbe-4809-a7db-95e7a33b60cc)
+
+
 Getting started
 ----------
+
 <br>
 1. Run samtools (tested version: 1.8) to convert tumor and normal BAM files to a mixed pileup file required by TransSSVs:<br><br>
 
