@@ -40,9 +40,9 @@ Getting started
 1. Run samtools (tested version: 1.8) to convert tumor and normal BAM files to a mixed pileup file required by TransSSVs:
 
 ```
-samtools mpileup -B -d 100 
--f /path/to/ref.fasta [-l] [-r] -q 10 -O -s
--a /path/to/tumor.bam /path/to/normal.bam |
+samtools mpileup -B -d 100 \
+-f /path/to/ref.fasta [-l] [-r] -q 10 -O -s \
+-a /path/to/tumor.bam /path/to/normal.bam | \
 gzip > /path/to/mixed_pileup_file
 ```
 <br>
@@ -53,38 +53,38 @@ Note: For the case of applying TransSSVs on a part of the whole genome, increase
 2. Run identi_candi_sites.py to identify candidate somatic small variants from the mixed pileup file: 
 
 ```
-python3 identi_candi_sites.py
- --Tumor_Normal_mpileup /path/to/mixed_pileup_file
+python3 identi_candi_sites.py \
+ --Tumor_Normal_mpileup /path/to/mixed_pileup_file \
  --Candidate_somatic_sites /path/to/candidate_sites
 ```
 <br>
 3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites as input for trained TransSSVs, or to create a file with mapping information for validated somatic sites for training TransSSVs:
 
 ```
-python3 mapping_infor_candi_sites.py
---Tumor_Normal_mpileup /path/to/mixed_pileup_file
---Candidate_validated_somatic_sites /path/to/candidate_sites
---number_of_columns N
---path /path/to/save
+python3 mapping_infor_candi_sites.py \
+--Tumor_Normal_mpileup /path/to/mixed_pileup_file \
+--Candidate_validated_somatic_sites /path/to/candidate_sites \
+--number_of_columns N \
+--path /path/to/save \
 --filename_1 filename_1
 ```
 <br>
 4. Run model_train.py to train TransSSVs:
 
 ```
-CUDA_VISIBLE_DEVICES='' python3 model_train.py
---input_dir /path/to/input
---filename filename
+CUDA_VISIBLE_DEVICES='' python3 model_train.py \
+--input_dir /path/to/input \
+--filename filename \
 --vaild_dir /path/to/vaild_dir
 ```
 <br>
 5. Run model_infer.py to predict somatic small variants:
 
 ```
-CUDA_VISIBLE_DEVICES='' python3 model_infer.py
---weights /path/to/weights
---input_dir /path/to/input
---filename filename
+CUDA_VISIBLE_DEVICES='' python3 model_infer.py \
+--weights /path/to/weights \
+--input_dir /path/to/input \
+--filename filename \
 --save_dir /results/TransSSVs
 ```
 
@@ -92,9 +92,9 @@ CUDA_VISIBLE_DEVICES='' python3 model_infer.py
 6. Run write_vcf.py to generate the vcf file:
 
 ```
-python3 write_vcf.py
---vcf_file /path/to/vcf_file
---pred_class /results/TransSSVs/y_pred_all.txt
+python3 write_vcf.py \
+--vcf_file /path/to/vcf_file \
+--pred_class /results/TransSSVs/y_pred_all.txt \
 --Candidate_somatic_sites /path/to/candidate_sites
 ```
 
