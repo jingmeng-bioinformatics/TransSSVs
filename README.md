@@ -101,7 +101,7 @@ python3 write_vcf.py
 
 <br>
 
-Example of the Validated_labels file for validated sites with labels (1: somatic site, 0: non-somatic site):<br><br>
+Example of the Validated_labels file for validated sites with labels (1: somatic site, 0: non-somatic site):
 
 ```
 chr1    790265  0
