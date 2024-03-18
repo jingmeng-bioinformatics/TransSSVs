@@ -56,7 +56,7 @@ samtools mpileup -B -d 100 \
 -a /path/to/tumor.bam /path/to/normal.bam | \
 gzip > /path/to/mixed_pileup_file
 ```
-It spended about 23h to generate the mileup-file of MB dataset (tumor: 104.08GB, normal: 98.14GB) on the centos 7 with 1 cpu and 2G memory.
+It spent about __23h__ to generate the mileup-file of MB dataset (tumor: __104.08GB__, normal: __98.14GB__) on the centos 7 with __1 cpu__ and __2G memory__.
 
 <br>
 Note: For the case of applying TransSSVs on a part of the whole genome, increase the BED entry by n (the number of flanking genomic sites to the left or right of the candidate somatic site) base pairs in each direction, and specify the genomic region via the option -l or -r.
