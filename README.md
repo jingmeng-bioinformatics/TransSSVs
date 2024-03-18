@@ -71,6 +71,8 @@ python3 identi_candi_sites.py \
  --Candidate_somatic_sites /path/to/candidate_sites \
  --number_of_columns Number
 ```
+number_of_columns: the number of flanking genomic sites to the left or right of the candidate somatic site(defult=7)
+
 <br>
 3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites as input for trained TransSSVs, or to create a file with mapping information for validated somatic sites for training TransSSVs:
 
