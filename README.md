@@ -9,6 +9,16 @@ TransSSVs was tested on Debian GNU/Linux 11 (bullseye) and requires Python 3.
 Prerequisites
 ----------
 + samtools 1.8
+```
+wget https://github.com/samtools/samtools/releases/download/1.8/samtools-1.8.tar.bz2
+tar jxvf samtools-1.8.tar.bz2
+cd samtools-1.8
+./configure --prefix=/where/to/install
+make
+make install
+export PATH=/where/to/install/bin:$PATH
+
+```
  <br>
 
 Python 3.7 and the following Python packages must be installed:
@@ -46,6 +56,8 @@ samtools mpileup -B -d 100 \
 -a /path/to/tumor.bam /path/to/normal.bam | \
 gzip > /path/to/mixed_pileup_file
 ```
+It spended about 23h to generate the mileup-file of MB dataset (tumor: 104.08GB, normal: 98.14GB) on the centos 7 with 1 cpu and 2G memory.
+
 <br>
 Note: For the case of applying TransSSVs on a part of the whole genome, increase the BED entry by n (the number of flanking genomic sites to the left or right of the candidate somatic site) base pairs in each direction, and specify the genomic region via the option -l or -r.
 <br>
@@ -110,6 +122,13 @@ chr1    1595272 1
 chr1    2312314 1
 chr1    5006153 0
 ```
+
+Testing time
+----------
+
+
+
+
 
 
 Please help us improve TransSSVs by reporting bugs or ideas on how to make things better. You can submit an issue or send us an email.<br>
