@@ -68,7 +68,8 @@ Note: For the case of applying TransSSVs on a part of the whole genome, increase
 ```
 python3 identi_candi_sites.py \
  --Tumor_Normal_mpileup /path/to/mixed_pileup_file \
- --Candidate_somatic_sites /path/to/candidate_sites
+ --Candidate_somatic_sites /path/to/candidate_sites \
+ --number_of_columns Number
 ```
 <br>
 3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites as input for trained TransSSVs, or to create a file with mapping information for validated somatic sites for training TransSSVs:
