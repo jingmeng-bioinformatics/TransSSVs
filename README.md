@@ -68,8 +68,7 @@ Note: For the case of applying TransSSVs on a part of the whole genome, increase
 ```
 python3 identi_candi_sites.py \
  --Tumor_Normal_mpileup /path/to/mixed_pileup_file \
- --Candidate_somatic_sites /path/to/candidate_sites \
- --number_of_columns N #(defult=7)
+ --Candidate_somatic_sites /path/to/candidate_sites 
 ```
 number_of_columns: the number of flanking genomic sites to the left or right of the candidate somatic site(defult=7)
 
