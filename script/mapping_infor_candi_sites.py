@@ -18,7 +18,7 @@ parser.add_argument('--Tumor_Normal_mpileup', required=True, metavar='pileup', h
 parser.add_argument('--indicator', default='inference', metavar='training or inference', help='creating input for the CNN model for training or inference')
 parser.add_argument('--number_of_columns', required=True, type=int, help='the number of flanking genomic sites to the left or right of the candidate somatic site')
 parser.add_argument('--path', required=True, metavar='DIR', help='path')
-parser.add_argument('--filename_1', required=True, metavar='filename_1', help='file_name_1')
+parser.add_argument('--filename', required=True, metavar='filename', help='file_name_1')
 
 args = parser.parse_args()
 
@@ -538,7 +538,7 @@ def main(args):
     with xopen(args.Tumor_Normal_mpileup, 'rt') as TN, open(args.Candidate_validated_somatic_sites, 'rt') as Cs:
         enume_Cs = enumerate(Cs) 
         enume_TN = enumerate(TN)
-        os.mkdir(args.path+'/'+args.filename_1+'_npyarray/')
+        os.mkdir(args.path+'/'+args.filename+'_npyarray/')
         i=0
         j=1
         shape_y=int((args.number_of_columns)*2+1)
@@ -629,12 +629,12 @@ def main(args):
             npyarray_1=np.concatenate((npyarray_1,matrix_1_all),axis=2)
         npyarray_1=npyarray_1.transpose(2,0,1)
         if args.indicator == 'training':
-            np.save(args.path+'/'+args.filename_1+'_npyarray/'+'data.'+args.filename_1+'.npy',npyarray_1)
-            np.save(args.path+'/'+args.filename_1+'_npyarray/'+'label.'+args.filename_1+'.npy',label_array)
+            np.save(args.path+'/'+args.filename+'_npyarray/'+'data.'+args.filename+'.npy',npyarray_1)
+            np.save(args.path+'/'+args.filename+'_npyarray/'+'label.'+args.filename+'.npy',label_array)
 
         else:
             pass
-        np.save(args.path+'/'+args.filename_1+'_npyarray/'+'data.'+args.filename_1+'.npy',npyarray_1)
+        np.save(args.path+'/'+args.filename+'_npyarray/'+'data.'+args.filename+'.npy',npyarray_1)
 
 
 
