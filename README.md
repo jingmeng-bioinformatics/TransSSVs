@@ -70,7 +70,10 @@ python3 identi_candi_sites.py \
  --Tumor_Normal_mpileup /path/to/mixed_pileup_file \
  --Candidate_somatic_sites /path/to/candidate_sites 
 ```
-number_of_columns: the number of flanking genomic sites to the left or right of the candidate somatic site(defult=7)
+
++ It spent about __13h__ to generate the candidate-file(__3MB__) of MB dataset on the centos 7 with __1 cpu__ and __2G memory__.
+
+
 
 <br>
 3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites as input for trained TransSSVs, or to create a file with mapping information for validated somatic sites for training TransSSVs:
@@ -81,8 +84,10 @@ python3 mapping_infor_candi_sites.py \
 --Candidate_validated_somatic_sites /path/to/candidate_sites \
 --number_of_columns N \ #(defult=7)
 --path /path/to/save \
---filename_1 filename_1
+--filename filename
 ```
+number_of_columns: the number of flanking genomic sites to the left or right of the candidate somatic site(defult=7)
+
 <br>
 4. Run model_train.py to train TransSSVs:
 
