@@ -81,7 +81,7 @@ python3 identi_candi_sites.py \
 ```
 python3 mapping_infor_candi_sites.py \
 --Tumor_Normal_mpileup /path/to/mixed_pileup_file \
---Candidate_validated_somatic_sites /path/to/candidate_sites \
+--Candidate_somatic_sites /path/to/candidate_sites \
 --number_of_columns N \ #(defult=7)
 --path /path/to/save \
 --filename filename
