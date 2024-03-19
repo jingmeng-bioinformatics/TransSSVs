@@ -1,6 +1,6 @@
 
 ##name='AML'
-##type='all'
+##type='all' 'snp' 'indel'
 ##caller='deepssv'
 library(PRROC)
 
