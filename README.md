@@ -107,7 +107,7 @@ number_of_columns      time(h)      disk_usage(MB)    running_mem(GB)    running
 
 ```
 <br>
-4. Run model_train.py to train TransSSVs:
+4. Run model_train.py to train your own TransSSVs model:
 
 ```
 CUDA_VISIBLE_DEVICES='' python3 model_train.py \
@@ -116,11 +116,11 @@ CUDA_VISIBLE_DEVICES='' python3 model_train.py \
 --vaild_dir /path/to/vaild_dir
 ```
 <br>
-5. Run model_infer.py to predict somatic small variants:
+5. Run model_infer.py to predict somatic small variants using our pre-trained model:
 
 ```
 CUDA_VISIBLE_DEVICES='' python3 model_infer.py \
---weights /path/to/weights \
+--weights /TransSSVs/model/pre_train_model \
 --input_dir /path/to/input \
 --filename filename \
 --save_dir /results/TransSSVs
