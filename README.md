@@ -89,7 +89,7 @@ python3 mapping_infor_candi_sites.py \
 number_of_columns: the number of flanking genomic sites to the left or right of the candidate somatic site(defult=7)
 
 ```
-number_of_columns      time(h)      disk_usage(MB)    running_mem(GB)    running_cpu(number)       number_of_candaidate_site
+number_of_columns      time(h)      disk_usage(MB)    running_mem(GB)    number_of_running_cpu      number_of_candaidate_site
 3                       3.97         121.83              2                     1                          87736
 4                       4.38         156.63              2                     1                          87736
 5                       4.84         191.44              2                     1                          87736
