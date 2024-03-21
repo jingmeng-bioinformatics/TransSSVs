@@ -88,6 +88,24 @@ python3 mapping_infor_candi_sites.py \
 ```
 number_of_columns: the number of flanking genomic sites to the left or right of the candidate somatic site(defult=7)
 
+```
+number_of_columns      time(h)      disk_usage(MB)      running_mem(GB)      running_cpu(number)         number_of_candaidate_site
+3                       3.97         121.83              2                     1                            87736
+4                       4.38         156.63              2                     1                            87736
+5                       4.84         191.44              2                     1                            87736
+6                       4.99         226.25              2                     1                            87736
+7                       5.30         261.06              2                     1                            87736
+10                      6.05         365.48              2                     1                            87736
+15                      8.40         539.51              2                     1                            87736
+20                      10.42        713.55              2                     1                            87736
+30                      13.87        1064.96             2                     1                            87736
+40 
+50 
+60
+
+
+
+```
 <br>
 4. Run model_train.py to train TransSSVs:
 
