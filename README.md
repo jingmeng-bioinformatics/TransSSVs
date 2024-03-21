@@ -41,7 +41,8 @@ Working demonstration
 ----------
 <br>
 
-![image](https://github.com/jingmeng-bioinformatics/TransSSVs/assets/35085665/897c7b39-0dbe-4809-a7db-95e7a33b60cc)
+![image](https://github.com/jingmeng-bioinformatics/TransSSVs/assets/35085665/51c2140b-4ead-496b-b709-40494b8fc644)
+
 
 
 Getting started
