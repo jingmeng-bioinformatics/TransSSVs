@@ -56,7 +56,7 @@ samtools mpileup -B -d 100 \
 -a /path/to/tumor.bam /path/to/normal.bam | \
 gzip > /path/to/mixed_pileup_file
 ```
-+ It spent about __23h__ to generate the mileup-file(__310.10GB__) of MB dataset (tumor: __104.08GB__, normal: __98.14GB__) on the centos 7 with __1 cpu__ and __2G memory__.
++ It spent about __23h__ to generate the mileup-file(__310.10GB__) of __MB__ dataset (tumor: __104.08GB__, normal: __98.14GB__) on the centos 7 with __1 cpu__ and __2G memory__.
 
 <br>
 Note: For the case of applying TransSSVs on a part of the whole genome, increase the BED entry by n (the number of flanking genomic sites to the left or right of the candidate somatic site) base pairs in each direction, and specify the genomic region via the option -l or -r.
@@ -71,12 +71,12 @@ python3 identi_candi_sites.py \
  --Candidate_somatic_sites /path/to/candidate_sites 
 ```
 
-+ It spent about __13h__ to generate the candidate-file(__3MB__) of MB dataset on the centos 7 with __1 cpu__ and __2G memory__.
++ It spent about __13h__ to generate the candidate-file(__3MB__) of __MB__ genome on the centos 7 with __1 cpu__ and __2G memory__.
 
 
 
 <br>
-3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites as input for trained TransSSVs, or to create a file with mapping information for validated somatic sites for training TransSSVs:
+3. Run mapping_infor_candi_sites.py to create a file with mapping information for candidate somatic small variant sites as input for trained TransSSVs, or to create a file with mapping information for validated somatic sites:
 
 ```
 python3 mapping_infor_candi_sites.py \
@@ -87,6 +87,8 @@ python3 mapping_infor_candi_sites.py \
 --filename filename
 ```
 number_of_columns: the number of flanking genomic sites to the left or right of the candidate somatic site(defult=7)
+
++ The resource consumption of generating a file with mapping information for __MB__ genome:
 
 ```
 number_of_columns      time(h)      disk_usage(MB)    running_mem(GB)    number_of_running_cpu      number_of_candaidate_site
