@@ -142,10 +142,10 @@ python3 write_vcf.py \
 Example of the Validated_labels file for validated sites with labels (1: somatic site, 0: non-somatic site):
 
 ```
-chr1    790265  0
-chr1    1595272 1
-chr1    2312314 1
-chr1    5006153 0
+chr1    790265    0
+chr1    1595272   1
+chr1    2312314   1
+chr1    5006153   0
 ```
 
 Testing time
