@@ -129,6 +129,25 @@ CUDA_VISIBLE_DEVICES='' python3 model_infer.py \
 --save_dir /results/TransSSVs
 ```
 
+number_of_columns      time(s)          running_mem(GB)    number_of_running_cpu      number_of_candaidate_site
+3                       66                   4                     1                          87736
+4                       58                   4                     1                          87736
+5                       64                   4                     1                          87736
+6                       70                   4                     1                          87736
+7                       74                   4                     1                          87736
+10                      86                   4                     1                          87736
+15                      111                  4                     1                          87736
+20                      137                  4                     1                          87736
+30                      186                  4                     1                          87736
+40                      253                  4                     1                          87736
+50                      296                  4                     1                          87736
+60                      449                  4                     1                          87736
+
+
+
+
+
+
 <br>
 6. Run write_vcf.py to generate the vcf file:
 
