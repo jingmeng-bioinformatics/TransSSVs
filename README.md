@@ -129,6 +129,7 @@ CUDA_VISIBLE_DEVICES='' python3 model_infer.py \
 --save_dir /results/TransSSVs
 ```
 
+```
 number_of_columns      time(s)          running_mem(GB)    number_of_running_cpu      number_of_candaidate_site
 3                       66                   4                     1                          87736
 4                       58                   4                     1                          87736
@@ -142,7 +143,7 @@ number_of_columns      time(s)          running_mem(GB)    number_of_running_cpu
 40                      253                  4                     1                          87736
 50                      296                  4                     1                          87736
 60                      449                  4                     1                          87736
-
+```
 
 
 
