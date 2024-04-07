@@ -124,7 +124,7 @@ CUDA_VISIBLE_DEVICES='' python3 model_train.py \
 --filename filename \
 --vaild_dir /path/to/vaild_dir \
 --indicator fine_tune \
---weights /TransSSVs/model/pre_train_model 
+--weights /TransSSVs/pre_trained_model/pre_trained_model 
 ```
 
 
@@ -133,7 +133,7 @@ CUDA_VISIBLE_DEVICES='' python3 model_train.py \
 
 ```
 CUDA_VISIBLE_DEVICES='' python3 model_infer.py \
---weights /TransSSVs/model/pre_train_model \
+--weights /TransSSVs/pre_trained_model/pre_trained_model \
 --input_dir /path/to/input \
 --filename filename \
 --save_dir /results/TransSSVs
