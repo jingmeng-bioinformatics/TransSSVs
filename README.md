@@ -116,7 +116,7 @@ CUDA_VISIBLE_DEVICES='' python3 model_train.py \
 --vaild_dir /path/to/vaild_dir
 ```
 <br>
-4.2 Run model_train.py to fine-tune your own TransSSVs model based on our pre-model:
+4.2 Run model_train.py to fine-tune your own TransSSVs model based on our pre-trained-model:
 
 ```
 CUDA_VISIBLE_DEVICES='' python3 model_train.py \
