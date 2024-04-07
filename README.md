@@ -120,6 +120,7 @@ CUDA_VISIBLE_DEVICES='' python3 model_train.py \
 ```
 <br>
 4.2 Run model_train.py to fine-tune your own TransSSVs model based on our pre-model:
+
 ```
 CUDA_VISIBLE_DEVICES='' python3 model_train.py \
 --input_dir /path/to/input \
