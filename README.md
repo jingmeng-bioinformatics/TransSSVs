@@ -105,9 +105,6 @@ number_of_columns      time(h)      disk_usage(MB)    running_mem(GB)    number_
 40                      17.60        1413.12             4                     1                          87736
 50                      22.20        1761.28             4                     1                          87736
 60                      41.87        2109.44             4                     1                          87736
-
-
-
 ```
 <br>
 4.1 Run model_train.py to train your own TransSSVs model:
