@@ -18,7 +18,7 @@ def main(args):
         # create a vcf file for predictions
         enume_Cs = enumerate(Cs)
         enume_pc = enumerate(pc)          
-        # the threshold used to decide if a candiate site is a somatic site
+        # the threshold used to decide if a candidate site is included
         t = 0.13
         
         # write meta-information lines
