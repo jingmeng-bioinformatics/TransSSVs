@@ -56,10 +56,10 @@ Getting started
 samtools mpileup -B -d 100 \
 -f /path/to/ref.fasta [-l] [-r] -q 10 -O -s \
 -a /path/to/tumor.bam /path/to/normal.bam | \
-gzip -v > /path/to/mixed_pileup_file
+gzip [-9] > /path/to/mixed_pileup_file
 ```
 + It spent about __23h__ to generate the mileup-file(__310.10GB__) of __MB__ dataset (tumor: __104.08GB__, normal: __98.14GB__) on the centos 7 with __1 cpu__ and __2G memory__.
-+ To reduce the storage, you can set the compression ratio by gzip -v.
++ To reduce the storage, you can set the compression ratio by gzip -9.
 
 <br>
 Note: For the case of applying TransSSVs on a part of the whole genome, increase the BED entry by n (the number of flanking genomic sites to the left or right of the candidate somatic site) base pairs in each direction, and specify the genomic region via the option -l or -r.
